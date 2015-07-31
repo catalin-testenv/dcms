@@ -8,6 +8,7 @@ from django.contrib.contenttypes.models import ContentType
 class Command(BaseCommand):
     help = 'Resets django database and migrations'
     # python manage.py ntk_reset --help
+    # python manage.py help ntk_reset
 
     def add_arguments(self, parser):
         parser.add_argument('--database', action='store', dest='database', default=DEFAULT_DB_ALIAS, help='Nominates which database to reset')
