@@ -7,6 +7,7 @@ from django.contrib.contenttypes.models import ContentType
 
 class Command(BaseCommand):
     help = 'Resets django database and migrations'
+    # python manage.py ntk_reset --help
 
     def add_arguments(self, parser):
         parser.add_argument('--database', action='store', dest='database', default=DEFAULT_DB_ALIAS, help='Nominates which database to reset')
@@ -30,7 +31,7 @@ class Command(BaseCommand):
                     continue
                 print('DROP TABLE %s' % (table,))
                 try:
-                    cursor.execute('DROP TABLE %s CASCADE' % (table,))
+                    cursor.execute('DROP TABLE IF EXISTS %s CASCADE' % (table,))
                 except Exception, e:
                     print(e)
         except Exception as e:
