@@ -1,0 +1,12 @@
+
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'blog:edit' article.id %}" method="post">
+{% csrf_token %}
+    <label for="title">title</label><br />
+    <input type="text" name="title" id="title" value="{{ article.title }}" />
+    <input type="submit" value="Submit" />
+</form>

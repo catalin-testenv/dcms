@@ -1,0 +1,8 @@
+<h1>{{ article.title }}</h1>
+<blockquote>
+    {{ article.pub_date }}
+</blockquote>
+<div>
+    {{ article.body }}
+</div>
+<p><a href="{% url 'blog:edit' article.id %}">edit</a></p>

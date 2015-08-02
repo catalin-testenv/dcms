@@ -1,0 +1,53 @@
+[
+  {
+    "model": "blog.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "John",
+      "last_name": "Lennon",
+      "email": "john@gmail.com"
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 2,
+    "fields": {
+      "first_name": "Joe",
+      "last_name": "Brick",
+      "email": "joe@gmail.com"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+      "title": "Awesome news!",
+      "body": "Here are some awesome news",
+      "excerpt": "some news",
+      "pub_date": "2015-04-02T12:34:33+03:00",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+      "title": "What's new?",
+      "body": "There is something new I have to write about.",
+      "excerpt": "something new",
+      "pub_date": "2015-04-02T12:35:33+03:00",
+      "author": 2
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+      "title": "New Story",
+      "body": "Here is a new story",
+      "excerpt": "some story",
+      "pub_date": "2015-04-02T12:36:33+03:00",
+      "author": 2
+    }
+  }
+]
